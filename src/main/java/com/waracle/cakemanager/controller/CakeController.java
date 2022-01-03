@@ -28,7 +28,7 @@ public class CakeController {
 				HttpStatus.CREATED);
 	}
 
-	@GetMapping(value = "/cakes")
+	@GetMapping(value = "/cake")
 	public ResponseEntity<List<CakeDTO>> getAllCakes() {
 		logger.debug("Retrieving cakes");
 		return new ResponseEntity<>(cakeService.getAllCakes(), HttpStatus.OK);
