@@ -64,13 +64,6 @@ public class CakeIntegrationTest {
     }
 
     @Test
-    @Tag("Create Cake Info - Fail 405")
-    public void createCake_WithFail_WithWrongHttpMethod() throws Exception {
-        mockMvc.perform(get("/cake").contentType(MediaType.APPLICATION_JSON)).andDo(print())
-                .andExpect(status().isMethodNotAllowed());
-    }
-
-    @Test
     @Tag("Create Cake Info - Fail 415")
     public void createCake_WithFail_WithWrongOutputFormat() throws Exception {
         mockMvc.perform(post("/cake").contentType(MediaType.APPLICATION_ATOM_XML)).andDo(print())

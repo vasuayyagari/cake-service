@@ -58,7 +58,7 @@ public class CakeControllerTest {
     }
 
     @Test
-    @Tag("Create interest: test 405 method not allowed")
+    @Tag("Create cake: test 405 method not allowed")
     public void createCake_with405UnsupportedMediaType() throws Exception {
         mockMvc.perform(get("/cake").contentType(MediaType.APPLICATION_JSON)).andDo(print())
                 .andExpect(status().isMethodNotAllowed());
@@ -66,7 +66,7 @@ public class CakeControllerTest {
 
     @Test
     @Tag("Get all Cake Info: 200 success")
-    public void getAllInterestInfo_with200Success() throws Exception {
+    public void getAllCakeInfo_with200Success() throws Exception {
         List<CakeDTO> cakeInfo = getCakeInfo();
         when(cakeService.getAllCakes()).thenReturn(cakeInfo);
         MvcResult result = mockMvc.perform(get("/cakes").contentType(MediaType.APPLICATION_JSON)).andDo(print())
