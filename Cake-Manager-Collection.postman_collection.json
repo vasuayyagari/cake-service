@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "326e5f79-70ec-4441-acae-816bd5239405",
+		"name": "Cake-Manager-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/cake",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"red velvet cake 3\",\r\n    \"description\": \"this is nice red cake 3\",\r\n    \"image\": \"/image/red_velvet3.png\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cake",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cake"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/cakes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cakes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cakes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
